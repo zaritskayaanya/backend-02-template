@@ -1,9 +1,7 @@
 const http = require('http');
 const { getUsers } = require('./backend-02-template-main/src/users');
-
 const PORT = process.env.PORT || 3003;
 const HOST = '127.0.0.1';
-
 const server = http.createServer(async (request, response) => {
     const url = new URL(request.url, `http://${HOST}:${PORT}`);
     const params = url.searchParams;
